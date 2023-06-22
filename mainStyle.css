@@ -1,0 +1,188 @@
+/*FONTS*/
+
+@font-face
+{
+	font-family: eurofurence;
+	src: url(Fonts/eurofurence.ttf);
+}
+
+@font-face
+{
+	font-family: geosans;
+	src: url(Fonts/GeosansLight.ttf);
+}
+
+
+/*MAIN*/
+
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	overflow: hidden;
+
+	transition-timing-function: ease-in;
+}
+
+*::selection {
+	color: #FFF;
+	background-color: #F00;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	background-color: #F00;
+	margin: 0;
+	padding: 0;
+	
+	transition-duration: 2s;
+}
+
+
+/*ELEMENTS*/
+
+div {
+	width: 100vw;
+	height: 100vh;
+	float: left;
+	margin-left: 0vw;
+}
+
+h1 {
+	font-family: eurofurence;
+	font-size: 5vh;
+	text-transform: uppercase;
+}
+
+ul li {
+	font-family: geosans;
+	font-size: 8vh;
+	text-align: right;
+	text-transform: lowercase;
+	position: relative;
+	padding: 0 3vw;
+	list-style-type: none;
+
+	transition-duration: 1s;
+}
+
+ul li.completed:hover {
+	transition-duration: 0.2s;
+	cursor: pointer;
+
+	color: #F00;
+	margin-right: 2vw;
+}
+
+p, td, i, p > a {
+	font-family: verdana;
+	font-size: 1.75vh;
+	user-select: text;
+}
+
+td {
+	padding: 1vw;
+	border-left: 0.1vw dashed #111;
+}
+
+td > img {
+	width: 20vw;
+	transition-duration: 1s;
+	transition-timing-function: ease-in-out;
+} td > img:hover {
+	width: 45vw;
+}
+
+a > div > p {
+	color: #FFF;
+	text-align: center;
+	margin-top: 27.5%;
+	font-family: geosans;
+	font-size: 2vw;
+}
+
+a {
+	color: #F00;
+}
+
+.red {
+	font-size: 2vw;
+	text-decoration: none;
+	color: #F00;
+	margin-right: 0.5vw;
+	font-family: eurofurence;
+	text-align: center;
+	display: inline-block;
+}
+
+a > div {
+	width: 5vw;
+	height: 5vw;
+	background-color: #F00;
+	border-radius: 100vw;
+	transition-duration: 1s;
+} a > div:hover {
+	background-color: #000;
+}
+
+
+/*IDs*/
+
+#arrowButton {
+	transition-duration: 0.1s;
+}
+
+#mousey {
+	transition-duration: 0.2s;
+}
+
+/*CLASSES*/
+
+h1.white {
+	color: #F4F4F4;
+}
+
+body.blackOut {
+	filter: brightness(0);
+}
+
+li.hidden {
+	margin-right: -22.5vw;
+	color: #FFF;
+}
+
+#circleInDiv {
+	pointer-events: none;
+	background: transparent;
+}
+
+div.blocker {
+	background-color: #FFF;
+	position: absolute;
+	border-style: none none none solid;
+    border-width: 0.2vw;
+	border-color: #000;
+	width: 70vw;
+	margin-left: 30vw;
+
+	transition-duration: 2.4s;
+}
+
+div.blocker.inhibited {
+	margin-top: 50vh;
+	height: 0vh;
+}
+
+div.blocker.actualized {
+	margin-top: -100vh;
+	height: 300vh;
+}
+
+
+.sphere {
+	position: absolute;
+	user-select: none;
+}
